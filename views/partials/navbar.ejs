@@ -1,0 +1,66 @@
+<style>
+  .custom-navbar a:hover, .custom-dropdown:hover .dropbtn {
+      background-color: purple;
+  }
+  li:hover {
+      background-color: purple;
+  }
+  .custom-dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+  }
+  .custom-dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+  }
+  .custom-dropdown-content a:hover {
+      background-color: #ddd;
+  }
+  .custom-dropdown:hover .custom-dropdown-content {
+      display: block;
+  }
+</style>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="/">We Build You</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="/createplan">Try it out!</a>
+              </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/meals">Meals</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/workouts">Workouts</a>
+            </li>
+            <li class="nav-item custom-dropdown">
+                <button class="dropbtn nav-link">About Us
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="custom-dropdown-content">
+                    <a href="/about">Our Story</a>
+                    <a href="/contact">Contact</a>
+                </div>
+              </li>
+          </ul>
+      </div>
+      <a class="navbar-brand" href="/profile">Profile</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+  </div>
+</nav>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>We build You</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .story-section, .features-section, .journey-section {
+            margin: 40px 0;
+        }
+        .journey-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        .highlight {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <%- include('partials/navbar') %>
+    <div class="container">
+        <div class="story-section text-center">
+            <h1>Our Story</h1>
+            <p>We Build You is not just a fitness app; it's a journey towards a healthier, stronger you. Our mission is to make fitness accessible and enjoyable for everyone, regardless of their starting point.</p>
+        </div>
+
+        <div class="journey-section">
+            <h2 class="highlight">The journey to fitness made simple</h2>
+            <div class="row">
+                <div class="col-md-6">
+                  <p>As a beginner in fitness, I recognized the struggles many people face when trying to achieve their fitness goals. The abundance of conflicting information and the lack of personalized guidance often led to frustration and stagnation.</p>
+                  <p>Driven by the desire to create a solution, I embarked on a mission to develop an app that would provide personalized meal plans and workout routines based on individual profiles. After months of research and development, We Build You was born.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://media.licdn.com/dms/image/D4D12AQHN35HFBlr8Iw/article-cover_image-shrink_720_1280/0/1704527980342?e=2147483647&v=beta&t=TlFZALpM4jTTC3nHh-XKPjcb-w8iiVAazfuu4716UaI" alt="Fitness Journey">
+                </div>
+            </div>
+        </div>
+
+        <div class="features-section">
+            <h2>Why We Build You is Useful</h2>
+            <div class="feature">
+                <h3>Personalized Plans</h3>
+                <p>Our app takes into account your height, weight, age, and fitness goals to create customized meal plans and workout routines that are tailored just for you.</p>
+            </div>
+            <div class="feature">
+                <h3>Easy to Use</h3>
+                <p>With an intuitive interface, We Build You makes it simple to navigate through your plans, track your progress, and make adjustments as needed.</p>
+            </div>
+            <div class="feature">
+                <h3>Comprehensive Database</h3>
+                <p>Access a vast database of meals and exercises. Our meal plans come with detailed macros and ingredients, while our workout routines cover all major muscle groups with a variety of exercises.</p>
+            </div>
+            <div class="feature">
+                <h3>Track Your Progress</h3>
+                <p>Monitor your improvements over time with our progress tracking features. Stay motivated by seeing how far you've come on your fitness journey.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

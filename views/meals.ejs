@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>We build You</title>
+    <style>
+        .meal-card {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <%- include('partials/navbar') %>
+    <div class="container">
+        <h1>Meals</h1>
+        <div class="row">
+            <% meals.forEach(meal => { %>
+                <div class="col-md-4">
+                    <div class="card meal-card">
+                        <img src="/images/<%= meal.image %>" class="card-img-top" alt="<%= meal.name %>">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= meal.name %></h5>
+                            <p class="card-text"><%= meal.description %></p>
+                            <p class="card-text">Protein: <%= meal.protein %>g, Fat: <%= meal.fat %>g, Carbs: <%= meal.carbs %>g, Calories: <%= meal.calories %> kcal</p>
+                            <h6>Ingredients</h6>
+                            <ul>
+                                <% meal.ingredients.split(',').forEach(ingredient => { %>
+                                    <li><%= ingredient %></li>
+                                <% }) %>
+                            </ul>
+                            <form action="/deletemeal" method="post" style="display:inline;">
+                                <input type="hidden" name="mealId" value="<%= meal.mealId %>">
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                            <button class="btn btn-secondary" onclick="window.location.href='/editmeal/<%= meal.mealId %>'">Edit</button>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+        <button class="btn btn-primary" onclick="window.location.href='/createmeal'">Create Meal</button>
+    </div>
+</body>
+</html>
